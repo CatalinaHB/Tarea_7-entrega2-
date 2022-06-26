@@ -1,0 +1,176 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.contenedor{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "barra barra barra barra barra "
+                        "logo logo login carrito contador"
+                        "logo logo navegador navegador navegador"
+                        "titulo titulo titulo titulo titulo"
+                        "ordenar ordenar buscador buscador buscador"
+                        "contenedor_productos contenedor_productos contenedor_productos contenedor_productos contenedor_productos"
+}
+.barra{
+    grid-area: barra;
+    background-color: #3a54b4;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  
+}
+.logo{
+    grid-area:logo ;
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.login{
+    grid-area: login;
+    text-align: right;
+    margin-top: 20px;
+   
+}
+.carrito{
+    grid-area: carrito;
+    text-align: right;
+    line-height: 10px;
+    margin-top: 20px;
+   
+}
+.contador{
+    grid-area: contador;
+    text-align: left;
+    line-height: 70px;
+}
+
+.navegador{
+    grid-area: navegador;
+}
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: darkblue;
+    height: 80px;
+}
+.ordenar{
+    grid-area: ordenar;
+    text-align: center;
+}
+.buscador{
+    grid-area: buscador;
+    text-align: center;
+}
+.contenedor_productos{
+    grid-area: contenedor_productos;
+    display: flex; 
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 150px ;
+    margin-left: 250px;
+     
+
+}
+.producto{
+    max-width: 60%;/*Limita el ancho del cuadro contenedor*/
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.producto_titulo{
+    color: purple;
+    text-align: left;
+}
+p {
+    line-height: 1.8;
+    color: pink;
+    text-align: left;
+  }
+.producto_precio{
+    text-align: left;
+}
+.producto_imagen{
+    text-align: left;
+}
+.producto_boton_mas{
+    text-align: left;
+    font-size: 20px;
+}
+.producto_boton_menos{
+    text-align: left;
+    font-size: 20px;
+}
+.producto_contador{
+    text-align: left;
+    font-size: 20px;
+}
+/* Inicio Navegador */
+nav {
+    background: white;
+    /* margin-top: -16px;*/
+    margin-left: -20px;
+    text-align: right;
+    position: relative;
+    display: flexbox;
+    height: 40px;
+    width: 740px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a54b4;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 1.2rem;
+  }
+  
+  li {
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    /*Letra del navegador*/
+    margin: -60px 20px;
+    color: violet;
+  }
+  
+  ul ul {
+    position: absolute;
+    display: none;
+  }
+  
+  ul ul li {
+    display: block;
+    font-size: 1 rem;
+    /*Letra del submenú*/
+    width: 300px;
+    text-align: left;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3a54b4;
+  }
+  
+  a:hover {
+    color: darkblue;
+    /* Sirve para que la letra cambie de color cuando se pasa el mouse*/
+    font-weight: bold;
+  }
+  
+  ul li:hover ul {
+    display: block;
+    background-color: white;
+  }
+  
+  /* Fin Navegador */
+  
