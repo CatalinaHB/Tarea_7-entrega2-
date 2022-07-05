@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos.css">
+    <!-- INICIO: Para que funcione la función toggle -->
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+    <!-- FIN: Para que funcione la función toggle -->
+     <!-- INICIO: Para que aparezca la equix en el carrito -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- FIN: Para que aparezca la equix en el carrito -->
     <title>Proyecto</title>
 </head>
 <body>
@@ -14,7 +20,7 @@
           </div>
           <div class = "caja login"  id="login"><img src="./img/metalbrein_login.png" alt="login" srcset="" width="30px"></div>
           <div class = "caja carrito"  id="carrito_caja"><button id="boton_carrito"><img src="./img/metalbrein_carro_s.png" alt="carrito" width="30px"></button></div>
-          <div class = "caja contador" id="contador"><span>1</span></div>
+          <div class = "caja contador" id="contador"><span>0</span></div>
           <div class = "caja navegador"  id="navegador">
             <nav>
                 <ul>
@@ -42,12 +48,13 @@
           <div class="caja titulo" id="titulo"><h1>Productos</h1></div>
           <div class="caja ordenar" id="ordenar"><select name="ordenar" id="ordenar_selector">
                                                          <option value="No ordenar">Recomendados</option>
-                                                         <option value="Ordenar del más caro al más barato">Ordenar del más caro al más barato</option>
-                                                         <option value="Ordenar del más barato al más caro">Ordenar del más barato al más caro</option>  
+                                                         <option value="Ordenar del más caro al más barato" id="Ordenar del más caro al más barato">Ordenar del más caro al más barato</option>
+                                                         <option value="Ordenar del más barato al más caro" id="Ordenar del más barato al más caro">Ordenar del más barato al más caro</option>  
                                                 </select>
                                                 </div>
           <div class="caja buscador" id="buscador"><input type="text" placeholder="Buscar Producto"></div>
           <div class="caja contenedor_productos" id="contenedor_productos">
+            <!-- INICIO: Este código ya no debe ir acá porque está escrito en javacript -->
               <!-- <div class="producto">
                      <div class="producto_descripción">
                         <div class="parte_1">
@@ -63,26 +70,23 @@
                             <h4 class="producto_precio">$4.000</h4>
                          </div>
                     </div>               -->
+            <!-- FIN: Este código ya no debe ir acá porque está escrito en javacript -->
                </div>
           </div>
-    </main>
-    <div id="modal_contenedor" >
-        <div id="modal_carrito">
-            <h3>Carrito</h3>
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>CARRITO DE COMPRAS</h3><br>
+                <h4>Resumen de tu compra</h4><br>
+                <form action="">
+                    <div class="contenedor-carrito" id="contenedor-carrito"></div>
+                <p class="precio_total">Precio total: $<span id="precio_total">0</span></p>
+                <button class="pagar" type="submit">Ir a Pagar</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
     <script src="./js/main.js"></script>
-
-   <script>
-    $(document).ready(()=>{
-        $('boton_carrito').on('click',function(){
-            $('p').toggle()
-        })
-    })
-   </script>
-
-  
-    
-
+    <script src="./js/carrito.js"></script>
 </body>
 </html>
