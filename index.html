@@ -16,6 +16,7 @@
 <body>
     <main class="contenedor">
           <div class = "caja barra" id="barra">Las Condes | Valparaíso | Chile | +56 2 3308 0858 | contacto@metalbrein.cl</div>
+          <div class="caja regresiva" id="regresiva"><div class="oferta">BLACK FRIDAY <p class="miniparrafo">¡Apurate queda poco tiempo!</p></div></div>
           <div class = "caja logo"  id="logo"> <img src="./img/metalbrein_logo_s.png" alt="" srcset="">
           </div>
           <div class = "caja login"  id="login"><img src="./img/metalbrein_login.png" alt="login" srcset="" width="30px"></div>
@@ -81,12 +82,15 @@
                 <form action="">
                     <div class="contenedor-carrito" id="contenedor-carrito"></div>
                 <p class="precio_total">Precio total: $<span id="precio_total">0</span></p>
-                <button class="pagar" type="submit">Ir a Pagar</button>
+                <button class="pagar" type="submit" id="pagar">Ir a Pagar</button>
                 </form>
             </div>
         </div>
     </main>
     <script src="./js/main.js"></script>
     <script src="./js/carrito.js"></script>
+    <script src="./js/simplyCountdown.min.js"></script>
+    <script src="/js/countdown.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

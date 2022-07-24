@@ -11,6 +11,7 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
                         "barra barra barra barra barra "
+                        "regresiva regresiva regresiva regresiva regresiva"
                         "logo logo login carrito contador"
                         "logo logo navegador navegador navegador"
                         "titulo titulo titulo titulo titulo"
@@ -33,6 +34,48 @@
     /* Fin: con estas 3 lineas hago que la letra quede centrada */
   
 }
+
+.regresiva{
+  grid-area: regresiva;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.oferta{
+  color: yellow;
+  font-size: 50px;
+  display: block;
+  justify-content: center;
+}
+.miniparrafo{
+  color: yellow;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.simply-section{
+  background-color: yellow;
+  color: black;
+  width: 100px;
+  height: 50px;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+}
+.simply-amount{
+  display: block;
+  font-size: 40px;
+  justify-content: center;
+  font-size: 30px;
+  color: black;
+}
+
 .logo{
     grid-area:logo ;
     text-align: center;
@@ -253,5 +296,4 @@ nav {
   font-size: 20px;
   color: red;
   font-weight: bold;
-
 }

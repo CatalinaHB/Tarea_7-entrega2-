@@ -1,4 +1,3 @@
-
 //Array Vacío para poner los productos del carrito//
 let carrito_compras=[]
 //Constantes//
@@ -11,6 +10,7 @@ const contador=document.getElementById("contador")
 const precio_total=document.getElementById("precio_total")
 //Carrito
 const contenedor_carrito=document.getElementById("contenedor-carrito")
+const pagar=document.getElementById("pagar")
 //Buscador
 const buscador=document.getElementById("buscador")
 //Ordenar
@@ -133,6 +133,12 @@ function agregar_carrito(id){
     mostrar_carrito(adicionar_productos)
     actualizar_carrito()
     localStorage.setItem('carrito',JSON.stringify(carrito_compras)) //Paso1: Queda la info guardada, pero igual al refrescar se pierde  
+    Swal.fire({
+        title: 'Genial',
+        text: "Producto agregado exitosamente",
+        icon: 'success',
+        timer: 3000,
+    })
     }
 function mostrar_carrito(adicionar_productos){
     let div=document.createElement('div')
@@ -149,6 +155,12 @@ function mostrar_carrito(adicionar_productos){
         carrito_compras = carrito_compras.filter(ele => ele.id !== adicionar_productos.id)
         actualizar_carrito()
         localStorage.setItem('carrito', JSON.stringify(carrito_compras))
+        Swal.fire({
+            title: 'Eliminado',
+            text: "Producto eliminado exitosamente",
+            icon: 'warning',
+            timer: 3000,
+        })
     })}
 
 
@@ -169,11 +181,20 @@ function recuperar(){
     }
     
 }
-
-
 //Funciones//
 mostrarProductos(stockProductos)
 recuperar()
+
+pagar.addEventListener('click',()=>{
+    Swal.fire({
+        title: 'Genial',
+        text: "Finalizar compra",
+        icon: 'success',
+        timer: 99999999,
+    })
+})
+
+
 // Para eliminar el local storage se debe eliminar en la aplicacion//
 // Ir a la consola y poner LocalStorage.clear() y se borra el local storage
 // Voy en 1:09
